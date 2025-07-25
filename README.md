@@ -1,3 +1,25 @@
+
+
+ Executar o servidor Angular
+
+ng serve
+
+Acesse em: http://localhost:4200
+
+4. Compilar para produção (opcional)
+
+ng build --prod
+
+🐳 Docker (build e run)
+
+docker build -t frontend-creditos .
+docker run -p 80:80 frontend-creditos
+
+Acesse via: http://localhost
+
+
+
+
 # FrontendCreditos
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.

@@ -1,0 +1,32 @@
+// src/app/home/home.component.html
+<div class="container p-4">
+  <h2>Consulta de Créditos</h2>
+  <div class="form-group">
+    <label>Número da NFS-e:</label>
+    <input class="form-control" [(ngModel)]="numeroNfse">
+    <button class="btn btn-primary mt-2" (click)="buscarPorNfse()">Buscar por NFS-e</button>
+  </div>
+  <div class="form-group mt-4">
+    <label>Número do Crédito:</label>
+    <input class="form-control" [(ngModel)]="numeroCredito">
+    <button class="btn btn-secondary mt-2" (click)="buscarPorCredito()">Buscar Crédito</button>
+  </div>
+  <table *ngIf="creditos.length" class="table mt-4">
+    <thead>
+      <tr>
+        <th>Número Crédito</th>
+        <th>Tipo</th>
+        <th>Valor ISSQN</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let credito of creditos">
+        <td>{{ credito.numeroCredito }}</td>
+        <td>{{ credito.tipoCredito }}</td>
+        <td>{{ credito.valorIssqn }}</td>
+        <td><a [routerLink]="['/credito', credito.numeroCredito]" class="btn btn-sm btn-info">Ver Detalhes</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

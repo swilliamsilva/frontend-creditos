@@ -1,0 +1,8 @@
+<input #nfseInput placeholder="Digite o número da NFSe">
+<button (click)="buscarPorNfse(nfseInput.value)">Buscar</button>
+
+<ul>
+  <li *ngFor="let credito of creditos">
+    {{ credito.numeroCredito }} - {{ credito.numeroNfse }}
+  </li>
+</ul>
