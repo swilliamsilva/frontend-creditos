@@ -21,12 +21,13 @@ export class CreditoDetailComponent implements OnInit {
   ngOnInit(): void {
     const numero = this.route.snapshot.paramMap.get('numeroCredito');
     if (numero) {
-      this.service.buscarPorNumeroCredito(numero).pipe(
+      // Usando o novo nome do método
+      this.service.buscarCreditoPorNumero(numero).pipe(
         catchError(err => {
           this.erro = 'Erro ao buscar crédito: ' + (err?.message || 'backend offline');
           return of(null);
         })
-      ).subscribe(data => {
+      ).subscribe((data: CreditoResponse | null) => {
         if (!data) {
           this.erro = 'Crédito não encontrado';
         } else {

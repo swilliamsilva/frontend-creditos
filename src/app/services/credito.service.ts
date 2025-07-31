@@ -1,35 +1,52 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { CreditoResponse } from '../models/credito-response.interface';
+import { environment } from '../core/environments/environment'; // Caminho corrigido
 
 @Injectable({
   providedIn: 'root'
 })
 export class CreditoService {
-  private baseUrl = 'http://localhost:8080/api/creditos';
-
-  private httpOptions = {
-    headers: new HttpHeaders({
-      Authorization: 'Basic ' + btoa('admin:admin123')
-    })
-  };
+  private apiUrl = environment.apiUrl;
+  private username = environment.apiUsername;
+  private password = environment.apiPassword;
 
   constructor(private http: HttpClient) {}
 
-  listarTodos(): Observable<CreditoResponse[]> {
-    return this.http.get<CreditoResponse[]>(this.baseUrl, this.httpOptions);
+  private getAuthHeader(): HttpHeaders {
+    if (this.username && this.password) {
+      const authToken = btoa(`${this.username}:${this.password}`);
+      return new HttpHeaders({
+        'Authorization': `Basic ${authToken}`
+      });
+    }
+    return new HttpHeaders();
   }
 
-  buscarPorNumeroNfse(numeroNfse: string): Observable<CreditoResponse[]> {
-    return this.http.get<CreditoResponse[]>(`${this.baseUrl}/nfse/${numeroNfse}`, this.httpOptions);
+  buscarCreditosPorNfse(numeroNfse: string): Observable<CreditoResponse[]> {
+    const headers = this.getAuthHeader();
+    return this.http.get<CreditoResponse[]>(
+      `${this.apiUrl}/creditos/nfse/${numeroNfse}`,
+      { headers }
+    ).pipe(
+      catchError(() => of([]))
+    );
   }
 
-  buscarPorNumeroCredito(numeroCredito: string): Observable<CreditoResponse> {
-    return this.http.get<CreditoResponse>(`${this.baseUrl}/numero/${numeroCredito}`, this.httpOptions);
+  buscarCreditoPorNumero(numeroCredito: string): Observable<CreditoResponse | null> {
+    const headers = this.getAuthHeader();
+    return this.http.get<CreditoResponse>(
+      `${this.apiUrl}/creditos/numero/${numeroCredito}`,
+      { headers }
+    ).pipe(
+      catchError(() => of(null))
+    );
   }
 
-  // Adicionar métodos com os nomes esperados pelo componente
-  getCreditosPorNfse = this.buscarPorNumeroNfse;
-  getCreditoPorNumero = this.buscarPorNumeroCredito;
+  // Adicione este método para compatibilidade
+  buscarPorNumeroCredito(numeroCredito: string): Observable<CreditoResponse | null> {
+    return this.buscarCreditoPorNumero(numeroCredito);
+  }
 }

@@ -79,7 +79,8 @@ export class CreditoConsultaComponent implements OnInit {
     this.state.tipoConsulta.set('nfse');
     this.state.termoBusca.set(this.numeroNfse);
 
-    this.creditoService.getCreditosPorNfse(this.numeroNfse).pipe(
+    // Método alterado para buscarCreditosPorNfse
+    this.creditoService.buscarCreditosPorNfse(this.numeroNfse).pipe(
       catchError(err => {
         this.state.erro.set('Erro ao consultar NFSe: ' + (err?.message || 'Backend indisponível.'));
         this.state.creditos.set([]);
@@ -102,7 +103,8 @@ export class CreditoConsultaComponent implements OnInit {
     this.state.tipoConsulta.set('credito');
     this.state.termoBusca.set(this.numeroCredito);
 
-    this.creditoService.getCreditoPorNumero(this.numeroCredito).pipe(
+    // Método alterado para buscarCreditoPorNumero
+    this.creditoService.buscarCreditoPorNumero(this.numeroCredito).pipe(
       catchError(err => {
         this.state.erro.set('Erro ao consultar crédito: ' + (err?.message || 'Backend indisponível.'));
         this.state.creditos.set([]);
