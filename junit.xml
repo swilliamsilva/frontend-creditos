@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="20" failures="0" errors="0" time="18.615">
+  <testsuite name="CreditoConsultaComponent" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:02" time="5.202" tests="1">
+    <testcase classname="CreditoConsultaComponent deve ser criado" name="CreditoConsultaComponent deve ser criado" time="0.693">
+    </testcase>
+  </testsuite>
+  <testsuite name="Componente App" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:07" time="1.521" tests="2">
+    <testcase classname="Componente App deve criar o componente App" name="Componente App deve criar o componente App" time="0.086">
+    </testcase>
+    <testcase classname="Componente App deve renderizar o título corretamente" name="Componente App deve renderizar o título corretamente" time="0.05">
+    </testcase>
+  </testsuite>
+  <testsuite name="ConsultaStateService" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:08" time="1.38" tests="10">
+    <testcase classname="ConsultaStateService deve ser criado" name="ConsultaStateService deve ser criado" time="0.034">
+    </testcase>
+    <testcase classname="ConsultaStateService deve ter valores iniciais corretos" name="ConsultaStateService deve ter valores iniciais corretos" time="0.026">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar tipoConsulta corretamente" name="ConsultaStateService deve atualizar tipoConsulta corretamente" time="0.02">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar termoBusca corretamente" name="ConsultaStateService deve atualizar termoBusca corretamente" time="0.02">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar creditos corretamente" name="ConsultaStateService deve atualizar creditos corretamente" time="0.019">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar carregando corretamente" name="ConsultaStateService deve atualizar carregando corretamente" time="0.019">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar erro corretamente" name="ConsultaStateService deve atualizar erro corretamente" time="0.021">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar consultaRealizada corretamente" name="ConsultaStateService deve atualizar consultaRealizada corretamente" time="0.019">
+    </testcase>
+    <testcase classname="ConsultaStateService limparResultados deve limpar resultados mantendo tipoConsulta" name="ConsultaStateService limparResultados deve limpar resultados mantendo tipoConsulta" time="0.047">
+    </testcase>
+    <testcase classname="ConsultaStateService limparResultados deve ser chamado sem erros quando já está limpo" name="ConsultaStateService limparResultados deve ser chamado sem erros quando já está limpo" time="0.02">
+    </testcase>
+  </testsuite>
+  <testsuite name="CreditoDetailComponent" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:10" time="1.451" tests="2">
+    <testcase classname="CreditoDetailComponent deve ser criado" name="CreditoDetailComponent deve ser criado" time="0.141">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve carregar dados do crédito" name="CreditoDetailComponent deve carregar dados do crédito" time="0.042">
+    </testcase>
+  </testsuite>
+  <testsuite name="Componente Home" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:11" time="1.206" tests="1">
+    <testcase classname="Componente Home deve criar o componente" name="Componente Home deve criar o componente" time="0.098">
+    </testcase>
+  </testsuite>
+  <testsuite name="CreditoListComponent" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:13" time="1.401" tests="1">
+    <testcase classname="CreditoListComponent deve ser criado" name="CreditoListComponent deve ser criado" time="0.264">
+    </testcase>
+  </testsuite>
+  <testsuite name="CreditoService" errors="0" failures="0" skipped="0" timestamp="2025-07-31T10:42:14" time="1.223" tests="3">
+    <testcase classname="CreditoService deve listar todos os créditos" name="CreditoService deve listar todos os créditos" time="0.054">
+    </testcase>
+    <testcase classname="CreditoService deve buscar crédito por número NFSe" name="CreditoService deve buscar crédito por número NFSe" time="0.022">
+    </testcase>
+    <testcase classname="CreditoService deve buscar crédito por número de crédito" name="CreditoService deve buscar crédito por número de crédito" time="0.019">
+    </testcase>
+  </testsuite>
+</testsuites>

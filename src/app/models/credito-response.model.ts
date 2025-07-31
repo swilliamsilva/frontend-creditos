@@ -1,5 +1,4 @@
-// credito-request.ts
-export interface CreditoRequest {
+export interface CreditoResponse {
   numeroCredito: number;
   numeroNfse: string;
   dataConstituicao: string;
@@ -11,4 +10,5 @@ export interface CreditoRequest {
   valorDeducao: number;
   baseCalculo: number;
   
+
 }

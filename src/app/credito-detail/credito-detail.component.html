@@ -1,0 +1,18 @@
+<div class="container p-4" *ngIf="credito">
+  <h2 class="mb-4">Detalhes do Crédito {{ credito.numeroCredito }}</h2>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Número da NFS-e:</strong> {{ credito.numeroNfse }}</li>
+    <li class="list-group-item"><strong>Data da Constituição:</strong> {{ credito.dataConstituicao }}</li>
+    <li class="list-group-item"><strong>Valor ISSQN:</strong> {{ credito.valorIssqn | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
+    <li class="list-group-item"><strong>Tipo de Crédito:</strong> {{ credito.tipoCredito }}</li>
+    <li class="list-group-item"><strong>Simples Nacional:</strong> {{ credito.simplesNacional ? 'Sim' : 'Não' }}</li>
+    <li class="list-group-item"><strong>Alíquota:</strong> {{ credito.aliquota }}%</li>
+    <li class="list-group-item"><strong>Valor Faturado:</strong> {{ credito.valorFaturado | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
+    <li class="list-group-item"><strong>Valor Dedução:</strong> {{ credito.valorDeducao | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
+    <li class="list-group-item"><strong>Base de Cálculo:</strong> {{ credito.baseCalculo | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
+  </ul>
+</div>
+
+<div class="container mt-4" *ngIf="erro">
+  <div class="alert alert-danger">{{ erro }}</div>
+</div>

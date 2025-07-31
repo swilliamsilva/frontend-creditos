@@ -1,17 +1,27 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts" 
+  ],
   "include": [
-    "src/**/*.ts"
+    "src/**/*.d.ts"
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/test.ts",
+    "src/**/*.spec.ts",
+    "src/jest-setup.ts",
+    "src/server.ts",
+    "src/main.server.ts",
+    "src/app/app.server.module.ts",
+    "src/app/core/interceptors/error.interceptor.ts",
+    "src/app/models/credito-entity.model.ts",
+    "src/app/models/credito-request.ts",
+    "src/app/models/credito-response.model.ts",
+    "src/app/services/formatacao.service.ts"
   ]
 }

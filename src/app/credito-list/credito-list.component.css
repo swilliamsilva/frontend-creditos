@@ -1,0 +1,14 @@
+.lista-creditos {
+  list-style: none;
+  padding: 0;
+}
+
+.item-credito {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.item-credito:hover {
+  background-color: #f0f0f0;
+}

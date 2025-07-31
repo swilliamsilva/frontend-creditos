@@ -1,0 +1,11 @@
+<div *ngIf="!creditos?.length">
+  Nenhum crédito encontrado.
+</div>
+
+<ul *ngIf="creditos?.length" class="lista-creditos">
+  <li *ngFor="let c of creditos" (click)="onSelecionar(c)" class="item-credito">
+    <strong>{{ c.numeroNfse }}</strong> - 
+    {{ c.numeroCredito | number }} - 
+    {{ c.valorIssqn | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}
+  </li>
+</ul>

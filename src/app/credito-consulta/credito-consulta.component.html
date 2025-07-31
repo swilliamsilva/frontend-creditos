@@ -1,0 +1,33 @@
+<div class="container p-4">
+  <h2 class="mb-4">Consultar Créditos</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="numeroNfse" class="form-label">Número da NFSe:</label>
+      <input id="numeroNfse" class="form-control" [(ngModel)]="numeroNfse" type="text" />
+      <button class="btn btn-outline-primary mt-2 w-100" (click)="consultarPorNfse()" [disabled]="!numeroNfse.trim()">
+        Buscar por NFSe
+      </button>
+    </div>
+
+    <div class="col-md-6">
+      <label for="numeroCredito" class="form-label">Número do Crédito:</label>
+      <input id="numeroCredito" class="form-control" [(ngModel)]="numeroCredito" type="text" />
+      <button class="btn btn-outline-success mt-2 w-100" (click)="consultarPorNumeroCredito()" [disabled]="!numeroCredito.trim()">
+        Buscar por Crédito
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="isCarregando" class="alert alert-info">Buscando dados...</div>
+
+  <div *ngIf="erro" class="alert alert-danger">{{ erro }}</div>
+
+  <div *ngIf="creditos.length > 0">
+    <app-credito-list [creditos]="creditos" (selecionarCredito)="onSelecionar($event)"></app-credito-list>
+  </div>
+
+  <div *ngIf="consultaRealizada && creditos.length === 0 && !erro" class="alert alert-warning">
+    Nenhum crédito encontrado.
+  </div>
+</div>
