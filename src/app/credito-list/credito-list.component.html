@@ -1,11 +1,34 @@
-<div *ngIf="!creditos?.length">
-  Nenhum crédito encontrado.
+<div class="list-group">
+  <div *ngFor="let credito of creditos" class="list-group-item list-group-item-action mb-3 shadow-sm">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1 fw-bold text-primary">Crédito: {{ credito.numeroCredito }}</h5>
+      <small class="text-muted">{{ credito.dataConstituicao | date:'dd/MM/yyyy' }}</small>
+    </div>
+    
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <p class="mb-1"><strong>NFSe: </strong> {{ credito.numeroNfse }}</p>
+        <p class="mb-1"><strong>Tipo: </strong> {{ credito.tipoCredito }}</p>
+        <p class="mb-1">
+          <strong>Simples Nacional: </strong> 
+          <span [ngClass]="credito.simplesNacional ? 'text-success' : 'text-danger'">
+            {{ credito.simplesNacional ? 'Sim' : 'Não' }}
+          </span>
+        </p>
+      </div>
+      
+      <div class="col-md-6">
+        <p class="mb-1"><strong>Valor Faturado: </strong> {{ credito.valorFaturado | currency:'BRL' }}</p>
+        <p class="mb-1"><strong>Valor ISSQN: </strong> {{ credito.valorIssqn | currency:'BRL' }}</p>
+        <p class="mb-1"><strong>Alíquota: </strong> {{ credito.aliquota }}%</p>
+      </div>
+    </div>
+    
+    <div class="d-flex justify-content-end mt-3">
+      <!-- Corrigir para emitir o evento correto -->
+      <button class="btn btn-outline-primary" (click)="onSelecionar(credito)">
+        <i class="bi bi-eye me-1"></i> Ver Detalhes
+      </button>
+    </div>
+  </div>
 </div>
-
-<ul *ngIf="creditos?.length" class="lista-creditos">
-  <li *ngFor="let c of creditos" (click)="onSelecionar(c)" class="item-credito">
-    <strong>{{ c.numeroNfse }}</strong> - 
-    {{ c.numeroCredito | number }} - 
-    {{ c.valorIssqn | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}
-  </li>
-</ul>

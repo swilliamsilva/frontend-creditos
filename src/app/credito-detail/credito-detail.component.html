@@ -1,18 +1,89 @@
-<div class="container p-4" *ngIf="credito">
-  <h2 class="mb-4">Detalhes do Crédito {{ credito.numeroCredito }}</h2>
-  <ul class="list-group">
-    <li class="list-group-item"><strong>Número da NFS-e:</strong> {{ credito.numeroNfse }}</li>
-    <li class="list-group-item"><strong>Data da Constituição:</strong> {{ credito.dataConstituicao }}</li>
-    <li class="list-group-item"><strong>Valor ISSQN:</strong> {{ credito.valorIssqn | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
-    <li class="list-group-item"><strong>Tipo de Crédito:</strong> {{ credito.tipoCredito }}</li>
-    <li class="list-group-item"><strong>Simples Nacional:</strong> {{ credito.simplesNacional ? 'Sim' : 'Não' }}</li>
-    <li class="list-group-item"><strong>Alíquota:</strong> {{ credito.aliquota }}%</li>
-    <li class="list-group-item"><strong>Valor Faturado:</strong> {{ credito.valorFaturado | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
-    <li class="list-group-item"><strong>Valor Dedução:</strong> {{ credito.valorDeducao | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
-    <li class="list-group-item"><strong>Base de Cálculo:</strong> {{ credito.baseCalculo | currency: 'BRL':'symbol':'1.2-2':'pt-BR' }}</li>
-  </ul>
-</div>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Detalhes do Crédito</h2>
+            <!-- Botão Voltar  -->
+            <button (click)="voltar()" class="btn btn-warning btn-lg d-flex align-items-center">
+              <i class="bi bi-arrow-left-circle me-2 fs-4"></i>
+              <span class="fw-bold">Voltar</span>
+            </button>
+          </div>
+        </div>
 
-<div class="container mt-4" *ngIf="erro">
-  <div class="alert alert-danger">{{ erro }}</div>
+        
+        <div class="card-body">
+          <div *ngIf="erro" class="alert alert-danger">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            {{ erro }}
+          </div>
+          
+          <div *ngIf="!credito && !erro" class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Carregando...</span>
+            </div>
+            <p class="mt-3">Carregando detalhes do crédito...</p>
+          </div>
+          
+          <div *ngIf="credito" class="row">
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-header bg-light">
+                  <h5 class="mb-0">Informações Básicas</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong>Número do Crédito: </strong> {{ credito.numeroCredito }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Número da NFSe: </strong> {{ credito.numeroNfse }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Data de Constituição: </strong> {{ credito.dataConstituicao | date:'dd/MM/yyyy' }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Tipo de Crédito: </strong> {{ credito.tipoCredito }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Simples Nacional: </strong> 
+                    <span [ngClass]="credito.simplesNacional ? 'text-success' : 'text-danger'">
+                      {{ credito.simplesNacional ? 'Sim' : 'Não' }}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-header bg-light">
+                  <h5 class="mb-0">Valores Financeiros</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong>Valor Faturado: </strong> {{ credito.valorFaturado | currency:'BRL' }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Valor Dedução: </strong> {{ credito.valorDeducao | currency:'BRL' }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Base de Cálculo: </strong> {{ credito.baseCalculo | currency:'BRL' }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Alíquota: </strong> {{ credito.aliquota }}%
+                  </li>
+                  <li class="list-group-item bg-light">
+                    <strong class="fs-5">Valor ISSQN: </strong> 
+                    <span class="fs-5 text-success fw-bold">{{ credito.valorIssqn | currency:'BRL' }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

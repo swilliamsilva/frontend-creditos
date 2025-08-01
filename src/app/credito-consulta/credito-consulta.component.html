@@ -1,33 +1,64 @@
-<div class="container p-4">
-  <h2 class="mb-4">Consultar Créditos</h2>
-
-  <div class="row mb-3">
-    <div class="col-md-6">
-      <label for="numeroNfse" class="form-label">Número da NFSe:</label>
-      <input id="numeroNfse" class="form-control" [(ngModel)]="numeroNfse" type="text" />
-      <button class="btn btn-outline-primary mt-2 w-100" (click)="consultarPorNfse()" [disabled]="!numeroNfse.trim()">
-        Buscar por NFSe
-      </button>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Consulta de Créditos</h2>
+          <p></p>
+        </div>
+        
+        <div class="card-body">
+          <form (submit)="consultar()">
+            <div class="mb-3">
+              <label for="numeroCredito" class="form-label">Número do Crédito  </label>
+              <input type="text" class="form-control form-control-lg" 
+                     id="numeroCredito" [(ngModel)]="numeroCredito" 
+                     name="numeroCredito" placeholder="Ex: 123456">
+            </div>
+            
+            <div class="mb-4 text-center">
+              <span class="fw-bold">ou pelo </span>
+            </div>
+            
+            <div class="mb-4">
+              <label for="numeroNfse" class="form-label">Número da NFSe  </label>
+              <input type="text" class="form-control form-control-lg" 
+                     id="numeroNfse" [(ngModel)]="numeroNfse" 
+                     name="numeroNfse" placeholder="Ex: 7891011">
+            </div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg" [disabled]="isCarregando">
+                <span *ngIf="!isCarregando">Consultar</span>
+                <span *ngIf="isCarregando">
+                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                  Consultando...
+                </span>
+              </button>
+            </div>
+          </form>
+          
+          <div *ngIf="erro" class="alert alert-danger mt-4">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            {{ erro }}
+          </div>
+          
+          <div *ngIf="consultaRealizada">
+            <h3 class="mt-5 mb-4 border-bottom pb-2">Resultados</h3>
+            
+            <div *ngIf="creditos.length === 0" class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i>
+              Nenhum crédito encontrado
+            </div>
+            <!-- Corrigir o evento selecionar -->
+            <app-credito-list *ngIf="creditos.length > 0" 
+                  [creditos]="creditos" 
+                  (selecionar)="onSelecionar($event)">
+            </app-credito-list>
+            
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="col-md-6">
-      <label for="numeroCredito" class="form-label">Número do Crédito:</label>
-      <input id="numeroCredito" class="form-control" [(ngModel)]="numeroCredito" type="text" />
-      <button class="btn btn-outline-success mt-2 w-100" (click)="consultarPorNumeroCredito()" [disabled]="!numeroCredito.trim()">
-        Buscar por Crédito
-      </button>
-    </div>
-  </div>
-
-  <div *ngIf="isCarregando" class="alert alert-info">Buscando dados...</div>
-
-  <div *ngIf="erro" class="alert alert-danger">{{ erro }}</div>
-
-  <div *ngIf="creditos.length > 0">
-    <app-credito-list [creditos]="creditos" (selecionarCredito)="onSelecionar($event)"></app-credito-list>
-  </div>
-
-  <div *ngIf="consultaRealizada && creditos.length === 0 && !erro" class="alert alert-warning">
-    Nenhum crédito encontrado.
   </div>
 </div>

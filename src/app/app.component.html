@@ -1,2 +1,42 @@
-<h1>Hello, {{ title }}</h1>
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/">
+      <i class="bi bi-cash-coin me-2"></i>Consulta de Créditos
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/consulta" routerLinkActive="active">
+            <i class="bi bi-search me-1"></i> Consulta
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="bi bi-info-circle me-1"></i> Sobre
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-4">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="bg-light py-4 mt-5 border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Consulta de Créditos</h5>
+        <p class="text-muted">Sistema para consulta de créditos tributários</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="text-muted mb-0">williamsilva.codigo@gmail.com © 2025 Todos os direitos reservados</p>
+      </div>
+    </div>
+  </div>
+</footer>

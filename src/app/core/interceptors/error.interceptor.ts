@@ -17,24 +17,64 @@ export class ErrorInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(
-      catchError((error: unknown) => { // Tipo alterado para unknown
-        let errorMessage = 'Erro desconhecido!';
-        
-        // Verifica se é um erro HTTP
+      catchError((error: unknown) => {
+        let userMessage = 'Erro desconhecido!';
+        let technicalMessage = 'Erro desconhecido!';
+        let statusCode = 0;
+
+        // Tratamento de erros HTTP
         if (error instanceof HttpErrorResponse) {
-          // Trata erros de conexão
-          if (error.status === 0) {
-            errorMessage = 'Servidor offline. Tente novamente mais tarde.';
-          } else {
-            errorMessage = `Erro ${error.status}: ${error.error.message || error.message}`;
+          statusCode = error.status;
+          
+          switch (error.status) {
+            case 0:
+              userMessage = 'Servidor offline. Verifique sua conexão ou tente novamente mais tarde.';
+              technicalMessage = 'Não foi possível estabelecer conexão com o servidor.';
+              break;
+            case 400:
+              userMessage = 'Requisição inválida. Verifique os dados informados.';
+              technicalMessage = error.error.message || 'Bad Request';
+              break;
+            case 404:
+           
+              if (request.url.includes('/creditos/')) {
+                userMessage = 'Crédito não encontrado. Verifique o número informado.';
+              } 
+            
+              else if (request.url.includes('/notas-fiscais/')) {
+                userMessage = 'Nota fiscal não localizada.';
+              } 
+           
+              else {
+                userMessage = 'Recurso não encontrado.';
+              }
+              technicalMessage = error.error.message || 'Not Found';
+              break;
+            case 500:
+              userMessage = 'Erro interno no servidor. Tente novamente mais tarde.';
+              technicalMessage = error.error.message || 'Internal Server Error';
+              break;
+            case 504:
+              userMessage = 'Servidor demorou muito para responder. Tente novamente mais tarde.';
+              technicalMessage = 'Gateway Timeout';
+              break;
+            default:
+              userMessage = `Erro inesperado (${error.status})`;
+              technicalMessage = error.message;
           }
-        }
-        // Trata outros tipos de erros
+        } 
+        // Tratamento de outros tipos de erro
         else if (error instanceof Error) {
-          errorMessage = error.message;
+          userMessage = 'Ocorreu um erro inesperado no aplicativo.';
+          technicalMessage = error.message;
         }
 
-        this.messageService.showError(errorMessage);
+        // Exibe a mensagem amigável para o usuário
+        this.messageService.showError(userMessage);
+        
+        // Registra o erro completo no console (opcional)
+        console.error(`[${statusCode}] ${technicalMessage}`, error);
+        
         return throwError(() => error);
       })
     );

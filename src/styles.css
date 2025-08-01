@@ -3,3 +3,47 @@
 
 /* Ou se preferir o caminho completo: */
 /* @import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css'; */
+/* Estilos globais */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  border-radius: 0 !important;
+}
+
+.form-control-lg {
+  border-radius: 8px;
+}
+
+.list-group-item {
+  border-radius: 8px !important;
+  margin-bottom: 10px;
+}
+
+.btn-lg {
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+/* Efeito de sombra suave */
+.shadow-sm {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Cores personalizadas */
+.bg-light-custom {
+  background-color: #f8f9fa;
+}
