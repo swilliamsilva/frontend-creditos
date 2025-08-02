@@ -6,6 +6,12 @@
   },
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/test.ts",
+    "src/jest-setup.ts"
+  ],
+  "exclude": [
+    "src/main.server.ts",
+    "src/app/app.server.module.ts"
   ]
 }

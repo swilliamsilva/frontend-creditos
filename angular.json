@@ -17,7 +17,6 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "sourceMap": true,
             "assets": [
               {
                 "glob": "**/*",
@@ -28,13 +27,12 @@
               "node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
               "src/styles.css"
             ],
-            "outputPath": "dist/frontend-creditos/browser" 
+            "outputPath": "dist/frontend-creditos/browser"
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
-                 
                   "type": "initial",
                   "maximumWarning": "550kB",
                   "maximumError": "600kB"
@@ -77,54 +75,32 @@
           "builder": "@angular-devkit/build-angular:jest",
           "options": {
             "tsConfig": "tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"],
-            "coverage": true 
+            "polyfills": ["zone.js", "zone.js/testing"]
           },
           "configurations": {
-            "ci": {
-              "ci": true,
-              "reporters": ["default", "jest-junit"]
-            }
+            "ci": {}
           }
         },
-        "server": { 
-          "builder": "@angular-devkit/build-angular:server",
+        "server": {
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "options": {
-            "outputPath": "dist/frontend-creditos/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "browserTarget": "frontend-creditos:build",
+            "serverTarget": "frontend-creditos:server"
           },
           "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "optimization": true,
-              "sourceMap": false,
-              "extractLicenses": true
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": { 
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "frontend-creditos:build:development",
-              "serverTarget": "frontend-creditos:server:development"
-            },
             "production": {
               "browserTarget": "frontend-creditos:build:production",
               "serverTarget": "frontend-creditos:server:production"
+            },
+            "development": {
+              "browserTarget": "frontend-creditos:build:development",
+              "serverTarget": "frontend-creditos:server:development"
             }
           },
           "defaultConfiguration": "development"
         },
-        "prerender": { 
-          "builder": "@nguniversal/builders:prerender",
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "routes": ["/"]
           },

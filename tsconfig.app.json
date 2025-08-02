@@ -2,26 +2,19 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": ["node"]
+    "types": []
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts" 
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts"
   ],
   "exclude": [
-    "src/test.ts",
     "src/**/*.spec.ts",
+    "src/test.ts",
     "src/jest-setup.ts",
-    "src/server.ts",
-    "src/main.server.ts",
-    "src/app/app.server.module.ts",
-    "src/app/core/interceptors/error.interceptor.ts",
-    "src/app/models/credito-entity.model.ts",
-    "src/app/models/credito-request.ts",
-    "src/app/models/credito-response.model.ts",
-    "src/app/services/formatacao.service.ts"
+    "src/server.ts"
   ]
 }

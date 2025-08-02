@@ -1,9 +1,13 @@
 import 'jest-preset-angular/setup-jest';
-import '@angular-extensions/pretty-html-log';
+import 'zone.js';
+import 'zone.js/testing';
+import { TestBed } from '@angular/core/testing';
+import {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting
+} from '@angular/platform-browser-dynamic/testing';
 
-
-import { jest } from '@jest/globals';
-
-
-
-(jest as any).retryTimes(3);
+TestBed.initTestEnvironment(
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting()
+);
