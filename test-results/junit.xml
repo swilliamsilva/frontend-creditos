@@ -1,123 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="70" failures="0" errors="0" time="11.34">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:31" time="3.333" tests="15">
-    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.022">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.003">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.005">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.007">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.004">
-    </testcase>
-    <testcase classname="ConsultaStateService deve ser criado" name="ConsultaStateService deve ser criado" time="0.06">
-    </testcase>
-    <testcase classname="ConsultaStateService deve ter valores iniciais corretos" name="ConsultaStateService deve ter valores iniciais corretos" time="0.011">
-    </testcase>
-    <testcase classname="ConsultaStateService deve atualizar tipoConsulta corretamente" name="ConsultaStateService deve atualizar tipoConsulta corretamente" time="0.014">
-    </testcase>
-    <testcase classname="ConsultaStateService deve atualizar termoBusca corretamente" name="ConsultaStateService deve atualizar termoBusca corretamente" time="0.012">
-    </testcase>
-    <testcase classname="ConsultaStateService deve atualizar creditos corretamente" name="ConsultaStateService deve atualizar creditos corretamente" time="0.012">
-    </testcase>
-    <testcase classname="ConsultaStateService deve atualizar carregando corretamente" name="ConsultaStateService deve atualizar carregando corretamente" time="0.011">
-    </testcase>
-    <testcase classname="ConsultaStateService deve atualizar erro corretamente" name="ConsultaStateService deve atualizar erro corretamente" time="0.012">
-    </testcase>
-    <testcase classname="ConsultaStateService deve atualizar consultaRealizada corretamente" name="ConsultaStateService deve atualizar consultaRealizada corretamente" time="0.015">
-    </testcase>
-    <testcase classname="ConsultaStateService limparResultados deve limpar resultados mantendo tipoConsulta" name="ConsultaStateService limparResultados deve limpar resultados mantendo tipoConsulta" time="0.016">
-    </testcase>
-    <testcase classname="ConsultaStateService limparResultados deve ser chamado sem erros quando já está limpo" name="ConsultaStateService limparResultados deve ser chamado sem erros quando já está limpo" time="0.01">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:31" time="3.444" tests="11">
-    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.031">
+<testsuites name="jest tests" tests="100" failures="0" errors="0" time="14.159">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:03" time="4.159" tests="12">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.025">
     </testcase>
     <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.004">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.004">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.007">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.006">
-    </testcase>
-    <testcase classname="CreditoService deve buscar créditos por NFSe" name="CreditoService deve buscar créditos por NFSe" time="0.099">
-    </testcase>
-    <testcase classname="CreditoService deve buscar crédito por número de crédito" name="CreditoService deve buscar crédito por número de crédito" time="0.018">
-    </testcase>
-    <testcase classname="CreditoService deve usar o alias buscarPorNumeroCredito" name="CreditoService deve usar o alias buscarPorNumeroCredito" time="0.014">
-    </testcase>
-    <testcase classname="CreditoService deve retornar array vazio em caso de erro na busca por NFSe" name="CreditoService deve retornar array vazio em caso de erro na busca por NFSe" time="0.02">
-    </testcase>
-    <testcase classname="CreditoService deve retornar null em caso de erro na busca por número de crédito" name="CreditoService deve retornar null em caso de erro na busca por número de crédito" time="0.015">
-    </testcase>
-    <testcase classname="CreditoService deve tratar erro de rede na busca por NFSe" name="CreditoService deve tratar erro de rede na busca por NFSe" time="0.015">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:31" time="3.949" tests="12">
-    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.027">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.004">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.005">
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.007">
     </testcase>
     <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.01">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.005">
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.006">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve ser criado" name="CreditoDetailComponent deve ser criado" time="0.315">
+    <testcase classname="MessageService deve ser criado" name="MessageService deve ser criado" time="0.068">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve carregar crédito com sucesso" name="CreditoDetailComponent deve carregar crédito com sucesso" time="0.118">
+    <testcase classname="MessageService deve inicializar sem mensagem" name="MessageService deve inicializar sem mensagem" time="0.021">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve tratar erro quando crédito não for encontrado" name="CreditoDetailComponent deve tratar erro quando crédito não for encontrado" time="0.042">
+    <testcase classname="MessageService deve definir e limpar mensagem" name="MessageService deve definir e limpar mensagem" time="0.036">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve tratar erro de servidor offline" name="CreditoDetailComponent deve tratar erro de servidor offline" time="0.036">
+    <testcase classname="MessageService deve limpar mensagem automaticamente após 5 segundos" name="MessageService deve limpar mensagem automaticamente após 5 segundos" time="0.026">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve tratar outros erros" name="CreditoDetailComponent deve tratar outros erros" time="0.048">
+    <testcase classname="MessageService deve substituir mensagem existente" name="MessageService deve substituir mensagem existente" time="0.029">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve mostrar erro quando não há número na URL" name="CreditoDetailComponent deve mostrar erro quando não há número na URL" time="0.033">
+    <testcase classname="MessageService deve cancelar timeout anterior ao definir nova mensagem" name="MessageService deve cancelar timeout anterior ao definir nova mensagem" time="0.024">
     </testcase>
-    <testcase classname="CreditoDetailComponent deve voltar ao chamar voltar()" name="CreditoDetailComponent deve voltar ao chamar voltar()" time="0.022">
+    <testcase classname="MessageService deve lidar com múltiplas chamadas de clear" name="MessageService deve lidar com múltiplas chamadas de clear" time="0.015">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:35" time="1.168" tests="9">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:03" time="5.279" tests="12">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.031">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.003">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.006">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.012">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.02">
+    </testcase>
+    <testcase classname="Componente Home deve criar o componente" name="Componente Home deve criar o componente" time="0.466">
+    </testcase>
+    <testcase classname="Componente Home deve buscar créditos por NFSe" name="Componente Home deve buscar créditos por NFSe" time="0.096">
+    </testcase>
+    <testcase classname="Componente Home deve buscar crédito por número" name="Componente Home deve buscar crédito por número" time="0.073">
+    </testcase>
+    <testcase classname="Componente Home deve atualizar numeroNfse quando o input é alterado" name="Componente Home deve atualizar numeroNfse quando o input é alterado" time="0.088">
+    </testcase>
+    <testcase classname="Componente Home deve atualizar numeroCredito quando o input é alterado" name="Componente Home deve atualizar numeroCredito quando o input é alterado" time="0.056">
+    </testcase>
+    <testcase classname="Componente Home deve chamar buscarPorNfse quando o botão é clicado" name="Componente Home deve chamar buscarPorNfse quando o botão é clicado" time="0.335">
+    </testcase>
+    <testcase classname="Componente Home deve chamar buscarPorCredito quando o botão é clicado" name="Componente Home deve chamar buscarPorCredito quando o botão é clicado" time="0.067">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:03" time="5.655" tests="14">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.049">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.018">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.007">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.013">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.007">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve ser criado" name="CreditoConsultaComponent deve ser criado" time="0.676">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve inicializar com parâmetros da rota" name="CreditoConsultaComponent deve inicializar com parâmetros da rota" time="0.109">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve consultar por NFSe" name="CreditoConsultaComponent deve consultar por NFSe" time="0.142">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve consultar por número de crédito" name="CreditoConsultaComponent deve consultar por número de crédito" time="0.1">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve navegar ao selecionar crédito" name="CreditoConsultaComponent deve navegar ao selecionar crédito" time="0.113">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve tratar erro na consulta por NFSe" name="CreditoConsultaComponent deve tratar erro na consulta por NFSe" time="0.102">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve tratar erro na consulta por número de crédito" name="CreditoConsultaComponent deve tratar erro na consulta por número de crédito" time="0.087">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve mostrar erro ao consultar sem parâmetros" name="CreditoConsultaComponent deve mostrar erro ao consultar sem parâmetros" time="0.087">
+    </testcase>
+    <testcase classname="CreditoConsultaComponent deve abrir prompt quando não há parâmetro na rota" name="CreditoConsultaComponent deve abrir prompt quando não há parâmetro na rota" time="0.1">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:08" time="1.53" tests="9">
     <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.004">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.001">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.001">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.003">
-    </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.001">
-    </testcase>
-    <testcase classname="Componente App deve criar o componente App" name="Componente App deve criar o componente App" time="0.142">
-    </testcase>
-    <testcase classname="Componente App deve exibir mensagens de erro do MessageService" name="Componente App deve exibir mensagens de erro do MessageService" time="0.046">
-    </testcase>
-    <testcase classname="Componente App não deve exibir mensagem quando não há erro" name="Componente App não deve exibir mensagem quando não há erro" time="0.027">
-    </testcase>
-    <testcase classname="Componente App deve conter o router-outlet" name="Componente App deve conter o router-outlet" time="0.023">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:35" time="1.676" tests="6">
-    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.003">
     </testcase>
     <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.002">
     </testcase>
     <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.001">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.002">
+    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.005">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.001">
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.003">
     </testcase>
-    <testcase classname="CreditoConsultaComponent deve ser criado" name="CreditoConsultaComponent deve ser criado" time="0.469">
+    <testcase classname="CreditoListComponent deve ser criado" name="CreditoListComponent deve ser criado" time="0.322">
+    </testcase>
+    <testcase classname="CreditoListComponent deve exibir créditos quando receber dados via input" name="CreditoListComponent deve exibir créditos quando receber dados via input" time="0.053">
+    </testcase>
+    <testcase classname="CreditoListComponent não deve exibir itens quando não há créditos" name="CreditoListComponent não deve exibir itens quando não há créditos" time="0.051">
+    </testcase>
+    <testcase classname="CreditoListComponent deve emitir evento ao clicar no botão &quot;Ver Detalhes&quot;" name="CreditoListComponent deve emitir evento ao clicar no botão &quot;Ver Detalhes&quot;" time="0.056">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:35" time="1.284" tests="6">
-    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.007">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:09" time="1.605" tests="12">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.002">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.002">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.002">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.007">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.002">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve ser criado" name="CreditoDetailComponent deve ser criado" time="0.306">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve carregar crédito com sucesso" name="CreditoDetailComponent deve carregar crédito com sucesso" time="0.089">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve tratar erro quando crédito não for encontrado" name="CreditoDetailComponent deve tratar erro quando crédito não for encontrado" time="0.034">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve tratar erro de servidor offline" name="CreditoDetailComponent deve tratar erro de servidor offline" time="0.038">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve tratar outros erros" name="CreditoDetailComponent deve tratar outros erros" time="0.041">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve mostrar erro quando não há número na URL" name="CreditoDetailComponent deve mostrar erro quando não há número na URL" time="0.035">
+    </testcase>
+    <testcase classname="CreditoDetailComponent deve voltar ao chamar voltar()" name="CreditoDetailComponent deve voltar ao chamar voltar()" time="0.037">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:09" time="1.183" tests="12">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.004">
     </testcase>
     <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.002">
     </testcase>
@@ -125,35 +137,85 @@
     </testcase>
     <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.003">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.001">
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.003">
     </testcase>
-    <testcase classname="Componente Home deve criar o componente" name="Componente Home deve criar o componente" time="0.229">
+    <testcase classname="CreditoService deve buscar créditos por NFSe" name="CreditoService deve buscar créditos por NFSe" time="0.039">
+    </testcase>
+    <testcase classname="CreditoService deve buscar crédito por número de crédito" name="CreditoService deve buscar crédito por número de crédito" time="0.01">
+    </testcase>
+    <testcase classname="CreditoService deve usar o alias buscarPorNumeroCredito" name="CreditoService deve usar o alias buscarPorNumeroCredito" time="0.013">
+    </testcase>
+    <testcase classname="CreditoService deve retornar array vazio em caso de erro na busca por NFSe" name="CreditoService deve retornar array vazio em caso de erro na busca por NFSe" time="0.028">
+    </testcase>
+    <testcase classname="CreditoService deve retornar null em caso de erro na busca por número de crédito" name="CreditoService deve retornar null em caso de erro na busca por número de crédito" time="0.025">
+    </testcase>
+    <testcase classname="CreditoService deve tratar erro de rede na busca por NFSe" name="CreditoService deve tratar erro de rede na busca por NFSe" time="0.02">
+    </testcase>
+    <testcase classname="CreditoService deve tratar erro genérico na busca por número de crédito" name="CreditoService deve tratar erro genérico na busca por número de crédito" time="0.018">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:36" time="0.892" tests="6">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:09" time="1.41" tests="9">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.002">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.004">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.002">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.003">
+    </testcase>
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.002">
+    </testcase>
+    <testcase classname="Componente App deve criar o componente App" name="Componente App deve criar o componente App" time="0.111">
+    </testcase>
+    <testcase classname="Componente App deve exibir mensagens de erro do MessageService" name="Componente App deve exibir mensagens de erro do MessageService" time="0.034">
+    </testcase>
+    <testcase classname="Componente App não deve exibir mensagem quando não há erro" name="Componente App não deve exibir mensagem quando não há erro" time="0.03">
+    </testcase>
+    <testcase classname="Componente App deve conter o router-outlet" name="Componente App deve conter o router-outlet" time="0.039">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:10" time="0.676" tests="5">
     <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.003">
     </testcase>
     <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.001">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.001">
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.002">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.002">
+    <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.003">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.001">
-    </testcase>
-    <testcase classname="CreditoListComponent deve ser criado" name="CreditoListComponent deve ser criado" time="0.099">
+    <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T14:58:36" time="0.672" tests="5">
-    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.002">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-08-02T16:29:10" time="0.856" tests="15">
+    <testcase classname=" Zone.js deve estar presente" name=" Zone.js deve estar presente" time="0.003">
     </testcase>
     <testcase classname="Ambiente de Teste Angular TestBed deve estar configurado corretamente" name="Ambiente de Teste Angular TestBed deve estar configurado corretamente" time="0.001">
     </testcase>
-    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.001">
+    <testcase classname="Ambiente de Teste Angular Jest deve estar operacional" name="Ambiente de Teste Angular Jest deve estar operacional" time="0.002">
     </testcase>
     <testcase classname="Ambiente de Teste Angular deve resolver Promises corretamente" name="Ambiente de Teste Angular deve resolver Promises corretamente" time="0.002">
     </testcase>
     <testcase classname="Ambiente de Teste Angular deve manipular Observables corretamente" name="Ambiente de Teste Angular deve manipular Observables corretamente" time="0.001">
+    </testcase>
+    <testcase classname="ConsultaStateService deve ser criado" name="ConsultaStateService deve ser criado" time="0.012">
+    </testcase>
+    <testcase classname="ConsultaStateService deve ter valores iniciais corretos" name="ConsultaStateService deve ter valores iniciais corretos" time="0.007">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar tipoConsulta corretamente" name="ConsultaStateService deve atualizar tipoConsulta corretamente" time="0.011">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar termoBusca corretamente" name="ConsultaStateService deve atualizar termoBusca corretamente" time="0.013">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar creditos corretamente" name="ConsultaStateService deve atualizar creditos corretamente" time="0.006">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar carregando corretamente" name="ConsultaStateService deve atualizar carregando corretamente" time="0.007">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar erro corretamente" name="ConsultaStateService deve atualizar erro corretamente" time="0.006">
+    </testcase>
+    <testcase classname="ConsultaStateService deve atualizar consultaRealizada corretamente" name="ConsultaStateService deve atualizar consultaRealizada corretamente" time="0.005">
+    </testcase>
+    <testcase classname="ConsultaStateService limparResultados deve limpar resultados mantendo tipoConsulta" name="ConsultaStateService limparResultados deve limpar resultados mantendo tipoConsulta" time="0.014">
+    </testcase>
+    <testcase classname="ConsultaStateService limparResultados deve ser chamado sem erros quando já está limpo" name="ConsultaStateService limparResultados deve ser chamado sem erros quando já está limpo" time="0.007">
     </testcase>
   </testsuite>
 </testsuites>

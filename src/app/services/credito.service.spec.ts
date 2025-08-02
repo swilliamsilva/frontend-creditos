@@ -1,11 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { CreditoService } from './credito.service';
-import { 
-  HttpTestingController, 
-  provideHttpClientTesting 
-} from '@angular/common/http/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { CreditoResponse } from '../models/credito-response.interface';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 describe('CreditoService', () => {
   let service: CreditoService;
@@ -90,10 +88,7 @@ describe('CreditoService', () => {
     });
 
     const req = httpMock.expectOne(`${service['apiUrl']}/creditos/nfse/${numeroNfse}`);
-    req.flush(null, { 
-      status: 500, 
-      statusText: 'Internal Server Error' 
-    });
+    req.flush('Erro', { status: 500, statusText: 'Server Error' });
   });
 
   it('deve retornar null em caso de erro na busca por número de crédito', () => {
@@ -104,10 +99,7 @@ describe('CreditoService', () => {
     });
 
     const req = httpMock.expectOne(`${service['apiUrl']}/creditos/numero/${numeroCredito}`);
-    req.flush(null, { 
-      status: 404, 
-      statusText: 'Not Found' 
-    });
+    req.flush('Not Found', { status: 404, statusText: 'Not Found' });
   });
 
   it('deve tratar erro de rede na busca por NFSe', () => {
@@ -119,5 +111,17 @@ describe('CreditoService', () => {
 
     const req = httpMock.expectOne(`${service['apiUrl']}/creditos/nfse/${numeroNfse}`);
     req.error(new ProgressEvent('Network error'));
+  });
+
+  // Novo teste para cobrir o caso de erro não tratado
+  it('deve tratar erro genérico na busca por número de crédito', () => {
+    const numeroCredito = '500';
+
+    service.buscarCreditoPorNumero(numeroCredito).subscribe(credito => {
+      expect(credito).toBeNull();
+    });
+
+    const req = httpMock.expectOne(`${service['apiUrl']}/creditos/numero/${numeroCredito}`);
+    req.flush('Erro interno', { status: 500, statusText: 'Internal Server Error' });
   });
 });
