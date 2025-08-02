@@ -16,16 +16,12 @@ export class HomeComponent {
   creditos: any[] = [];
 
   buscarPorNfse(): void {
-    // Chamada backend para buscar créditos por NFS-e
-    console.log('Buscar por NFS-e:', this.numeroNfse);
-    // Exemplo simulado:
-    this.creditos = [{ numeroCredito: '123', tipoCredito: 'Tipo A', valorIssqn: 100.0 }];
+    
+    this.creditos = [{ numeroCredito: '123', tipoCredito: 'Tipo A Simulado', valorIssqn: 100.0 }];
   }
 
   buscarPorCredito(): void {
-    // Chamada backend para buscar crédito por número
-    console.log('Buscar por Crédito:', this.numeroCredito);
-    // Exemplo simulado:
-    this.creditos = [{ numeroCredito: this.numeroCredito, tipoCredito: 'Tipo B', valorIssqn: 200.0 }];
+    
+    this.creditos = [{ numeroCredito: this.numeroCredito, tipoCredito: 'Tipo B Simulado', valorIssqn: 200.0 }];
   }
 }

@@ -17,56 +17,6 @@
     "serve:ssr": "node dist/frontend-creditos/server/main.js",
     "lint": "ng lint"
   },
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/test.ts"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/dist/"
-    ],
-    "moduleNameMapper": {
-      "^src/(.*)$": "<rootDir>/src/$1"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "<rootDir>/tsconfig.spec.json",
-        "stringifyContentPathRegex": "\\.(html|svg)$"
-      }
-    },
-    "transform": {
-      "^.+\\.(ts|js|html|svg)$": [
-        "jest-preset-angular",
-        {
-          "isolatedModules": true
-        }
-      ]
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!.*\\.mjs$)"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "text",
-      "lcov"
-    ],
-    "coverageDirectory": "coverage",
-    "reporters": [
-      "default",
-      [
-        "jest-junit",
-        {
-          "outputDirectory": "test-results",
-          "outputName": "junit.xml"
-        }
-      ]
-    ],
-    "verbose": true,
-    "testEnvironmentOptions": {
-      "url": "http://localhost/"
-    }
-  },
   "prettier": {
     "overrides": [
       {
