@@ -1,8 +1,15 @@
 README-TESTES-FINAIS.md
+
 Execute
-npm start
+
+npm run build << Vai compilar a aplicação
+
+
+npm start << Vai executar a aplicação 
 Assim que ele mostrar a resposta << √ Compiled successfully.>
+
 voce pode abrir em:
+
 http://localhost:4200
 
 
@@ -20,8 +27,11 @@ Fluxo de Trabalho Completo:
 cd /c/workspace-consultacredito/frontend-creditos
 
 # Instale as dependências
+
+CI/CD
+
 npm install
-npm ci << Use em vez o npm install >>
+npm ci          << Use em vez o npm install >>
 npm run test:ci <<(script específico para CI)>>
 
 # Inicie o servidor de desenvolvimento
@@ -32,17 +42,6 @@ npm start
 
 Configuração Recomendada no package.json:
 
-Verifique se seu package.json tem estes scripts:
-json
-
-{
-  "scripts": {
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint"
-  }
-}
 
 Se precisar limpar o cache do npm:
 npm cache clean --force
